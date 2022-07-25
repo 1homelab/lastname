@@ -1,0 +1,33 @@
+//@use '../utils' as *;
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    color: var(--color-hover);
+  }
+
+  &:active {
+    color: inherit;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+h1 {
+  font-family: var(--opensans);
+  font-size: clamp(2rem, 1rem + 5vw, 4rem);
+  font-weight: var(--font-weight);
+  letter-spacing: .04em;
+  line-height: 1.1;
+}

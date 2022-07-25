@@ -1,0 +1,31 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #1F2633;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-text-dark: #000;
+  --color-text-light: #ddd;
+  --color-link-over: inherit;
+  --color-primary: #e71d36;
+  --color-secondary: #2ec4b6;
+  --color-accent: #ff9f1c;
+
+  --z-index: 99;
+  --viewport-height: 100vh;
+  --viewport-weight: 100vw;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 2.0rem;
+  --container-weight: 60rem;
+}

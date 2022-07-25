@@ -1,0 +1,8 @@
+@use '../utils' as *;
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: var(--container-weight);
+  padding: var(--spacing-small);
+}
