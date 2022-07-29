@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/lastnameghost/site-source/issues"
   },
-  "homepage": "https://github.com/lastnameghost/site-source#readme"
+  "homepage": "https://github.com/lastnameghost/site-source#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.12",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0"
+  }
 }
