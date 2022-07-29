@@ -1,0 +1,33 @@
+.page-header {
+  position: relative;
+  overflow: hidden;
+  background-image: none;
+
+  & .home-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  :where(.logo, p) {
+    margin-bottom: var(--spacing-large);
+  }
+
+  .icon-div {
+    display: flex;
+    column-gap: 50px;
+
+    & .feather {
+      width: 30px;
+      height: 30px;
+    }
+
+    & a:hover {
+      .feather {
+        stroke-width: 3;
+      }
+    }
+  }
+}
