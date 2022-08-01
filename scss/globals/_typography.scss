@@ -1,4 +1,4 @@
-//@use '../utils' as *;
+@use '../utils' as *;
 
 a {
   text-decoration: none;
@@ -9,11 +9,11 @@ a {
   }
 
   &:hover {
-    color: var(--color-hover);
+    color: var(--color-link-hover);
   }
 
   &:active {
-    color: inherit;
+    color: var(--color-link-hover)t;
   }
 }
 
@@ -25,7 +25,6 @@ h3 {
 }
 
 h1 {
-  font-family: var(--opensans);
   font-size: clamp(2rem, 1rem + 5vw, 4rem);
   font-weight: var(--font-weight);
   letter-spacing: .04em;

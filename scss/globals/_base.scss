@@ -107,23 +107,6 @@ input,
   }
 }
 
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-
 body,
 html {
   height: 100%;
@@ -137,13 +120,13 @@ body {
   min-height: 100vh;
 
   font: {
-    size: 1.12rem;
+    size: var(--font-size);
     family: var(--fontstack);
     weight: 300;
   }
 
   line-height: 1.6;
   text-rendering: optimizeSpeed;
-  color: var(--color-white);
-  background: var(--background-dark);
+  color: var(--color-text-dark);
+  background: var(--color-background-light);
 }
