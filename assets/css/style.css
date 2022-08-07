@@ -4,15 +4,16 @@
   --weight-regular: 400;
   --weight-medium: 500;
   color-scheme: light dark;
-  --color-background-light: linear-gradient(180deg, #f0ebeb, #f0ebeb);
-  --color-background-dark: linear-gradient(180deg, #383838, #383838);
-  --color-text-dark: #2c2c2c;
-  --color-text-light: rgb(243, 237, 237);
-  --color-link: var(--color-primary);
-  --color-link-over: var(--color-secondary);
+  --color-dark: #212121;
+  --color-dark2: #2c2c2c;
+  --color-light: #ffffff;
   --color-primary: #e71d36;
   --color-secondary: #ff9f1c;
-  --z-index: 99;
+  --text-ondarkmode: var(--color-light);
+  --text-onlightmode: var(--color-dark);
+  --background-light: linear-gradient(180deg, #f0ebeb, #f0ebeb);
+  --background-dark: linear-gradient(180deg, #383838, #383838);
+  --color-links: var(--color-secondary);
   --viewport-height: 100vh;
   --viewport-weight: 100vw;
   --spacing-small: 0.5rem;
@@ -32,47 +33,6 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-/*-----Browser Inconsistancy Fixes-----*/
-button,
-input,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-}
-
-[type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
-}
-
-::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-}
-
-::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-:-moz-focusring {
-  outline: 1px dotted ButtonText;
 }
 
 /*-----Core Styles-----*/
@@ -128,6 +88,18 @@ input,
     scroll-behavior: auto !important;
   }
 }
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: var(--color-light);
+    color: var(--color-ondarkmode);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: var(--color-dark);
+    color: var(--color-onlightmode);
+  }
+}
 body,
 html {
   height: 100%;
@@ -136,11 +108,12 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
   font-size: var(--font-size);
   font-family: var(--fontstack);
-  font-weight: 300;
+  font-weight: var(--weight-regular);
   line-height: 1.6;
   text-rendering: optimizeSpeed;
   color: var(--color-text-dark);
@@ -149,16 +122,16 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--color-link);
+  color: var(--color-links);
 }
 a:visited {
   color: inherit;
 }
 a:hover {
-  color: var(--color-link-hover);
+  color: inherit;
 }
 a:active {
-  color: var(--color-link-hover) t;
+  color: inherit;
 }
 
 h1,
@@ -176,9 +149,7 @@ h1 {
 }
 
 .feather {
-  width: 24px;
-  height: 24px;
-  stroke: currentColor;
+  stroke: var(--color-dark);
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -205,25 +176,24 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: var(--container-weight);
 }
-.page-header :where(.logo, p) {
+.page-header .home-banner :where(.logo, p) {
   margin-bottom: var(--spacing-large);
 }
-.page-header :where(.span) {
+.page-header .home-banner :where(.span) {
   padding: 0 var(--spacing-small);
   border-radius: 1rem;
 }
-.page-header .icon-div {
+.page-header .home-banner .icon-div {
   display: flex;
   gap: calc(var(--icon-size) / 1);
 }
-.page-header .icon-div .feather {
+.page-header .home-banner .icon-div .feather {
   width: var(--icon-size);
   height: var(--icon-size);
 }
-.page-header .icon-div a:hover .feather {
-  stroke: var(--color-primary);
+.page-header .home-banner .icon-div a:hover .feather {
+  stroke: var(--color-secondary);
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 10s linear forwards;

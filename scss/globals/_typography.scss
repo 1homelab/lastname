@@ -2,18 +2,18 @@
 
 a {
   text-decoration: none;
-  color: var(--color-link);
+  color: var(--color-links);
 
   &:visited {
     color: inherit;
   }
 
   &:hover {
-    color: var(--color-link-hover);
+    color: inherit;
   }
 
   &:active {
-    color: var(--color-link-hover)t;
+    color: inherit;
   }
 }
 
@@ -32,9 +32,9 @@ h1 {
 }
 
 .feather {
-  width: 24px;
-  height: 24px;
-  stroke: currentColor;
+  //width: 24px;
+  //height: 24px;
+  stroke: var(--color-dark);
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;

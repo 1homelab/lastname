@@ -13,40 +13,50 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: var(--container-weight);
-  }
 
-  :where(.logo, p) {
-    margin-bottom: var(--spacing-large);
-  }
-
-  :where(.span) {
-    padding: 0 var(--spacing-small);
-    border-radius: 1rem;
-  }
-
-  .icon-div {
-    display: flex;
-    gap: calc(var(--icon-size) / 1);
-
-    & .feather {
-      width: var(--icon-size);
-      height: var(--icon-size);
+    :where(.logo, p) {
+      margin-bottom: var(--spacing-large);
     }
 
-    & a:hover {
+    :where(.span) {
+      padding: 0 var(--spacing-small);
+      border-radius: 1rem;
+    }
+
+    .icon-div {
+      display: flex;
+      gap: calc(var(--icon-size) / 1);
+
       .feather {
-        stroke: var(--color-primary);
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        animation: dash 10s linear forwards;
+        width: var(--icon-size);
+        height: var(--icon-size);
       }
+
+      a:hover {
+        .feather {
+          stroke: var(--color-secondary);
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          animation: dash 10s linear forwards;
+        }
+      }
+
+
     }
 
-    @keyframes dash {
-      to {
-        stroke-dashoffset: 0;
-      }
+
+  }
+
+
+
+
+
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
     }
   }
+
+
 }

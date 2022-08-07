@@ -1,24 +1,26 @@
 :root {
+
   // font
   --font-stack: Inter, Avenir, Helvetica, Arial, sans-serif;
   --font-size: 1.12rem;
   --weight-regular: 400;
   --weight-medium: 500;
-
   // colors, light & dark
+  // primary 
   color-scheme: light dark;
-  --color-background-light: linear-gradient(180deg, #f0ebeb, #f0ebeb);
-  --color-background-dark: linear-gradient(180deg, #383838, #383838);
-  --color-text-dark: #2c2c2c;
-  --color-text-light: rgb(243, 237, 237);
-  // links
-  --color-link: var(--color-primary);
-  --color-link-over: var(--color-secondary);
-  // primary & secondary
+  --color-dark: #212121;
+  --color-dark2: #2c2c2c;
+  --color-light: #ffffff;
   --color-primary: #e71d36;
   --color-secondary: #ff9f1c;
+
+  --text-ondarkmode: var(--color-light);
+  --text-onlightmode: var(--color-dark);
+  --background-light: linear-gradient(180deg, #f0ebeb, #f0ebeb);
+  --background-dark: linear-gradient(180deg, #383838, #383838);
+  // links
+  --color-links: var(--color-secondary);
   // sizing 
-  --z-index: 99;
   --viewport-height: 100vh;
   --viewport-weight: 100vw;
   --spacing-small: 0.5rem;

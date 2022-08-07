@@ -1,0 +1,66 @@
+/*-----Universal Styles-----*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*-----Core Styles-----*/
+:where(html) {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+:where(html:focus-within) {
+  scroll-behavior: smooth;
+}
+
+:where(blockquote, body, dd, dl, figure, h1, h2, h3, h4, p) {
+  margin: 0;
+}
+
+:where(ul, ol):where([role="list"]) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+:where(img, picture, svg) {
+  display: block;
+  max-width: 100%;
+}
+
+:where(img[width]) {
+  height: auto !important;
+}
+
+:where(svg) {
+  fill: currentColor;
+  pointer-events: none;
+}
+
+:where(button) {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
