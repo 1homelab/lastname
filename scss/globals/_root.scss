@@ -1,27 +1,30 @@
 :root {
   // font
-  --font-stack: Inter, Avenir, Helvetica, Arial, sans-serif;
+  --font-family: Inter, Avenir, Helvetica, sans-serif;
   --font-size: 1.12rem;
-  --weight-regular: 400;
-  --weight-medium: 500;
+  --font-regular: 400;
+  --font-medium: 500;
   // colors, light & dark
   // primary 
   color-scheme: light dark;
-  --color-bgdark: #212121;
-  --color-bgdark2: #2c2c2c;
-  --color-bglight: #e4e0e0;
-  --color-text-white: #e4e0e0;
-  --color-primary: #e71d36;
-  --color-secondary: #ff9f1c;
+  --dark: #000000;
+  --light: #ece9e9;
+  --white: #ffffff;
+  --color0: #FF9F29;
+  --color1: #FF9F29;
+  --color2: #FAF3E3;
+  --color3: #3D0000;
+  --color4: #950101;
+  --color5: #e71d36;
+
 
   // darkmode
-  --darkmode-bg: var(--color-bglight);
-  --lightmode-bg: var(--color-bgdark);
-  --darkmode-text: var(--color-text-light);
-  --lightmode-text: var(--color-text-dark);
+  --darkmode-bg: var(--dark); //--light-text: var(--dark); // text is dark for light bg
+  --lightmode-bg: var(--light); //--dark-text: var(--color2); // text is light for dark bg
+
 
   // links
-  --color-links: var(--color-secondary);
+  --links: none;
   // sizing 
   --viewport-height: 100vh;
   --viewport-weight: 100vw;

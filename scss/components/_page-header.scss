@@ -36,13 +36,12 @@
 
       a:hover {
         .feather {
-          stroke: var(--color-secondary);
+          //stroke: currentColor;
           stroke-dasharray: 1000;
           stroke-dashoffset: 1000;
           animation: dash 10s linear forwards;
         }
       }
-
 
     }
 

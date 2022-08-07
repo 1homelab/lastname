@@ -1,20 +1,21 @@
 :root {
-  --font-stack: Inter, Avenir, Helvetica, Arial, sans-serif;
+  --font-family: Inter, Avenir, Helvetica, sans-serif;
   --font-size: 1.12rem;
-  --weight-regular: 400;
-  --weight-medium: 500;
+  --font-regular: 400;
+  --font-medium: 500;
   color-scheme: light dark;
-  --color-bgdark: #212121;
-  --color-bgdark2: #2c2c2c;
-  --color-bglight: #e4e0e0;
-  --color-text-white: #e4e0e0;
-  --color-primary: #e71d36;
-  --color-secondary: #ff9f1c;
-  --darkmode-bg: var(--color-bglight);
-  --lightmode-bg: var(--color-bgdark);
-  --darkmode-text: var(--color-text-light);
-  --lightmode-text: var(--color-text-dark);
-  --color-links: var(--color-secondary);
+  --dark: #000000;
+  --light: #ece9e9;
+  --white: #ffffff;
+  --color0: #FF9F29;
+  --color1: #FF9F29;
+  --color2: #FAF3E3;
+  --color3: #3D0000;
+  --color4: #950101;
+  --color5: #e71d36;
+  --darkmode-bg: var(--dark);
+  --lightmode-bg: var(--light);
+  --links: none;
   --viewport-height: 100vh;
   --viewport-weight: 100vw;
   --spacing-small: 0.5rem;
@@ -89,18 +90,6 @@
     scroll-behavior: auto !important;
   }
 }
-@media (prefers-color-scheme: light) {
-  :root {
-    background-color: var(--lightmode-bg);
-    color: var(--color-text-dark);
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    background-color: var(--darkmode-bg);
-    color: var(--color-text-light);
-  }
-}
 body,
 html {
   height: 100%;
@@ -108,31 +97,35 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   min-width: 320px;
   min-height: 100vh;
   font-size: var(--font-size);
-  font-family: var(--fontstack);
-  font-weight: var(--weight-regular);
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
   line-height: 1.6;
   text-rendering: optimizeSpeed;
   color: var(--color-text-dark);
   background: var(--color-background-light);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: var(--light);
+    color: var(--dark);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: var(--dark);
+    color: var(--white);
+  }
+  :root .icon-div a:hover .feather {
+    stroke: var(--color1);
+  }
+}
 a {
   text-decoration: none;
-  color: var(--color-links);
-}
-a:visited {
-  color: inherit;
-}
-a:hover {
-  color: inherit;
-}
-a:active {
-  color: inherit;
+  color: var(--links);
 }
 
 h1,
@@ -150,7 +143,7 @@ h1 {
 }
 
 .feather {
-  stroke: var(--color-dark);
+  stroke: currentColor;
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -196,7 +189,6 @@ h1 {
   height: var(--icon-size);
 }
 .page-header .home-banner .icon-div a:hover .feather {
-  stroke: var(--color-secondary);
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 10s linear forwards;

@@ -2,19 +2,12 @@
 
 a {
   text-decoration: none;
-  color: var(--color-links);
+  color: var(--links);
 
-  &:visited {
-    color: inherit;
-  }
+  // &:hover {
+  // color: var(--color1);
+  //}
 
-  &:hover {
-    color: inherit;
-  }
-
-  &:active {
-    color: inherit;
-  }
 }
 
 h1,
@@ -34,7 +27,7 @@ h1 {
 .feather {
   //width: 24px;
   //height: 24px;
-  stroke: var(--color-dark);
+  stroke: currentColor;
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
