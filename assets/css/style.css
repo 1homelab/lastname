@@ -4,15 +4,16 @@
   --weight-regular: 400;
   --weight-medium: 500;
   color-scheme: light dark;
-  --color-dark: #212121;
-  --color-dark2: #2c2c2c;
-  --color-light: #ffffff;
+  --color-bgdark: #212121;
+  --color-bgdark2: #2c2c2c;
+  --color-bglight: #e4e0e0;
+  --color-text-white: #e4e0e0;
   --color-primary: #e71d36;
   --color-secondary: #ff9f1c;
-  --text-ondarkmode: var(--color-light);
-  --text-onlightmode: var(--color-dark);
-  --background-light: linear-gradient(180deg, #f0ebeb, #f0ebeb);
-  --background-dark: linear-gradient(180deg, #383838, #383838);
+  --darkmode-bg: var(--color-bglight);
+  --lightmode-bg: var(--color-bgdark);
+  --darkmode-text: var(--color-text-light);
+  --lightmode-text: var(--color-text-dark);
   --color-links: var(--color-secondary);
   --viewport-height: 100vh;
   --viewport-weight: 100vw;
@@ -90,14 +91,14 @@
 }
 @media (prefers-color-scheme: light) {
   :root {
-    background-color: var(--color-light);
-    color: var(--color-ondarkmode);
+    background-color: var(--lightmode-bg);
+    color: var(--color-text-dark);
   }
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    background-color: var(--color-dark);
-    color: var(--color-onlightmode);
+    background-color: var(--darkmode-bg);
+    color: var(--color-text-light);
   }
 }
 body,

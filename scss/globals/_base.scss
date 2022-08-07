@@ -1,14 +1,14 @@
 @media (prefers-color-scheme: light) {
   :root {
-    background-color: var(--color-light);
-    color: var(--color-ondarkmode);
+    background-color: var(--lightmode-bg);
+    color: var(--color-text-dark);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    background-color: var(--color-dark);
-    color: var(--color-onlightmode);
+    background-color: var(--darkmode-bg);
+    color: var(--color-text-light);
   }
 }
 
