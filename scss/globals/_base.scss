@@ -7,13 +7,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    background-color: var(--dark);
-    color: var(--white);
+    background-color: var(--darkmode-bg);
+    color: var(--light-text);
 
     .icon-div {
       a:hover {
         .feather {
-          stroke: var(--color1);
+          stroke: var(--color-4);
         }
       }
     }

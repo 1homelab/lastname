@@ -20,6 +20,26 @@
       margin-bottom: var(--spacing-large);
     }
 
+    h1 {
+      position: relative;
+      background: linear-gradient(to right, var(--color-5), var(--color-1), var(--color-1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      & spam {
+        font-size: .5em;
+      }
+    }
+
+    p {
+      background: linear-gradient(to right,
+          var(--color-2),
+          var(--color-3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+
     :where(.span) {
       padding: 0 var(--spacing-small);
       border-radius: 1rem;

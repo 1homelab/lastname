@@ -11,17 +11,22 @@
 }
 
 /*-----Core Styles-----*/
-:where(html) {
+html {
   font-size: 100%;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
-:where(html:focus-within) {
+html:focus-within {
   scroll-behavior: smooth;
 }
 
-:where(blockquote, body, dd, dl, figure, h1, h2, h3, h4, p) {
+h1,
+h2,
+h3,
+h4,
+p {
   margin: 0;
+  padding: 0;
 }
 
 :where(ul, ol):where([role="list"]) {
@@ -35,17 +40,17 @@
   max-width: 100%;
 }
 
-:where(img[width]) {
+img[width] {
   height: auto !important;
 }
 
-:where(svg) {
+svg {
   fill: currentColor;
   pointer-events: none;
 }
 
-:where(button) {
-  background: none;
+button,
+.btn {
   border: none;
   cursor: pointer;
 }
