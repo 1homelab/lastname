@@ -4,17 +4,18 @@
   --font-regular: 400;
   --font-medium: 500;
   color-scheme: light dark;
-  --dark: #000000;
-  --light: #ece9e9;
-  --white: #ffffff;
-  --color0: #FF9F29;
-  --color1: #FF9F29;
-  --color2: #FAF3E3;
-  --color3: #3D0000;
-  --color4: #950101;
-  --color5: #e71d36;
-  --darkmode-bg: var(--dark);
-  --lightmode-bg: var(--light);
+  --color-0: #000000;
+  --color-1: #f7f7f7;
+  --color-2: #e71d36;
+  --color-3: #FF9F29;
+  --color-4: #FF9F29;
+  --color-5: #FAF3E3;
+  --color-6: #3D0000;
+  --color-7: #950101;
+  --darkmode-bg: var(--color-0);
+  --light-text: var(--color-1);
+  --lightmode-bg: var(--color-1);
+  --dark-text: var(--color-0);
   --links: none;
   --viewport-height: 100vh;
   --viewport-weight: 100vw;
@@ -104,14 +105,12 @@ body {
   font-weight: var(--font-regular);
   line-height: 1.6;
   text-rendering: optimizeSpeed;
-  color: var(--color-text-dark);
-  background: var(--color-background-light);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    background-color: var(--light);
-    color: var(--dark);
+    background-color: var(--lightmode-bg);
+    color: var(--dark-text);
   }
 }
 @media (prefers-color-scheme: dark) {
