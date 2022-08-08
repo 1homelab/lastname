@@ -1,6 +1,7 @@
 :root {
   --font-family: Inter, Avenir, Helvetica, sans-serif;
   --font-size: 1.12rem;
+  --font-thin: 100;
   --font-regular: 400;
   --font-medium: 500;
   color-scheme: light dark;
@@ -91,22 +92,6 @@
     scroll-behavior: auto !important;
   }
 }
-body,
-html {
-  height: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  min-width: 320px;
-  min-height: 100vh;
-  font-size: var(--font-size);
-  font-family: var(--font-family);
-  font-weight: var(--font-regular);
-  line-height: 1.6;
-  text-rendering: optimizeSpeed;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     background-color: var(--lightmode-bg);
@@ -122,6 +107,22 @@ body {
     stroke: var(--color1);
   }
 }
+body,
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-thin);
+  line-height: 1.6;
+  text-rendering: optimizeSpeed;
+}
+
 a {
   text-decoration: none;
   color: var(--links);
@@ -132,13 +133,12 @@ h2,
 h3 {
   margin: 0;
   line-height: 1.1;
+  letter-spacing: 0.04em;
 }
 
 h1 {
   font-size: clamp(2rem, 1rem + 5vw, 4rem);
-  font-weight: var(--font-weight);
-  letter-spacing: 0.04em;
-  line-height: 1.1;
+  font-weight: var(--font-regular);
 }
 
 .feather {
