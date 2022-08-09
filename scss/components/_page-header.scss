@@ -22,9 +22,7 @@
 
     h1 {
       position: relative;
-      background: linear-gradient(to right, var(--color-5), var(--color-1), var(--color-1));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: inherit;
 
       & spam {
         font-size: .5em;
@@ -35,9 +33,10 @@
       background: linear-gradient(to right,
           var(--color-2),
           var(--color-3));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       text-align: center;
+      border: 0;
+      padding-left: var(--spacing-small);
+      padding-right: var(--spacing-small);
     }
 
     :where(.span) {
@@ -59,7 +58,7 @@
           //stroke: currentColor;
           stroke-dasharray: 1000;
           stroke-dashoffset: 1000;
-          animation: dash 10s linear forwards;
+          animation: draw 5s linear forwards;
         }
       }
 
@@ -74,7 +73,7 @@
 
 
 
-  @keyframes dash {
+  @keyframes draw {
     to {
       stroke-dashoffset: 0;
     }
