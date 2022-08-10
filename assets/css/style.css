@@ -19,9 +19,10 @@
   --links: none;
   --viewport-height: 100vh;
   --viewport-weight: 100vw;
-  --spacing-small: 0.5rem;
-  --spacing-medium: 1.5rem;
-  --spacing-large: 3rem;
+  --spacing-x-small: 0.5rem;
+  --spacing-small: 1.5rem;
+  --spacing-medium: 2.5rem;
+  --spacing-large: 3.5rem;
   --container-weight: 60rem;
   --icon-size: 2rem;
 }
@@ -57,18 +58,19 @@ p {
   padding: 0;
 }
 
-:where(ul, ol):where([role=list]) {
+ul,
+ol [role=list] {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-:where(img, picture, svg) {
+img,
+picture,
+video,
+svg {
   display: block;
   max-width: 100%;
-}
-
-img[width] {
   height: auto !important;
 }
 
@@ -96,6 +98,23 @@ button,
     scroll-behavior: auto !important;
   }
 }
+body,
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-thin);
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     background-color: var(--lightmode-bg);
@@ -111,32 +130,81 @@ button,
     stroke: var(--color-4);
   }
 }
-body,
-html {
-  height: 100%;
-  overflow-x: hidden;
+.fixed {
+  position: fixed;
 }
 
-body {
-  min-width: 320px;
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.place-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.max-h-screen {
+  max-height: 100vh;
+}
+
+.min-h-screen {
   min-height: 100vh;
-  font-size: var(--font-size);
-  font-family: var(--font-family);
-  font-weight: var(--font-thin);
-  line-height: 1.6;
-  text-rendering: optimizeSpeed;
 }
 
+.w-full {
+  width: 100%;
+}
+
+@max-weight {
+  max-width: 46rem;
+}
 a {
   text-decoration: none;
-  color: var(--links);
+  color: inherit;
 }
 
 h1,
 h2,
 h3 {
-  line-height: 1.1;
-  letter-spacing: 0.04em;
+  line-height: inherit;
+  font-weight: inherit;
 }
 
 h1 {
@@ -162,53 +230,50 @@ h1 {
 .page-header {
   position: relative;
   overflow: hidden;
-  background-image: none;
 }
-.page-header .home-banner {
+.page-header .page-banner {
+  height: 100%;
+  max-width: 46rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
   position: relative;
   transition: all 1s linear;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
-.page-header .home-banner :where(.logo, p) {
-  margin-bottom: var(--spacing-large);
+.page-header .page-banner .logo {
+  width: clamp(15rem, 5vw, 4rem);
 }
-.page-header .home-banner h1 {
+.page-header .page-banner .page-text h1 {
   position: relative;
+  font-size: clamp(2rem, 1rem + 4vw, 3rem);
   color: inherit;
 }
-.page-header .home-banner h1 spam {
-  font-size: 0.5em;
+.page-header .page-banner .page-text h1 spam {
+  font-size: 0.6rem;
 }
-.page-header .home-banner p {
-  background: linear-gradient(to right, var(--color-2), var(--color-3));
+.page-header .page-banner .page-text p {
   text-align: center;
   border: 0;
   padding-left: var(--spacing-small);
   padding-right: var(--spacing-small);
 }
-.page-header .home-banner :where(.span) {
+.page-header .page-banner :where(.span) {
   padding: 0 var(--spacing-small);
   border-radius: 1rem;
 }
-.page-header .home-banner .icon-div {
+.page-header .page-banner .page-icons {
   display: flex;
   gap: calc(var(--icon-size) / 1);
 }
-.page-header .home-banner .icon-div .feather {
+.page-header .page-banner .page-icons .feather {
   width: var(--icon-size);
   height: var(--icon-size);
 }
-.page-header .home-banner .icon-div a:hover .feather {
+.page-header .page-banner .page-icons a:hover .feather {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: draw 5s linear forwards;
 }
+
 @keyframes draw {
   to {
     stroke-dashoffset: 0;

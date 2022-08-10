@@ -3,48 +3,52 @@
 .page-header {
   position: relative;
   overflow: hidden;
-  background-image: none;
 
-  & .home-banner {
+
+  .page-banner {
+    height: 100%;
+    max-width: 46rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     position: relative;
     transition: all 1s linear;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 
-    :where(.logo, p) {
-      margin-bottom: var(--spacing-large);
+    .logo {
+      width: clamp(15rem, 5vw, 4rem);
     }
 
-    h1 {
-      position: relative;
-      color: inherit;
+    .page-text {
+      h1 {
+        position: relative;
+        font-size: clamp(2rem, 1rem + 4vw, 3rem);
+        color: inherit;
 
-      & spam {
-        font-size: .5em;
+        & spam {
+          font-size: .6rem;
+        }
+
+
+      }
+
+
+
+      p {
+        text-align: center;
+        border: 0;
+        padding-left: var(--spacing-small);
+        padding-right: var(--spacing-small);
       }
     }
 
-    p {
-      background: linear-gradient(to right,
-          var(--color-2),
-          var(--color-3));
-      text-align: center;
-      border: 0;
-      padding-left: var(--spacing-small);
-      padding-right: var(--spacing-small);
-    }
+
+
 
     :where(.span) {
       padding: 0 var(--spacing-small);
       border-radius: 1rem;
     }
 
-    .icon-div {
+    .page-icons {
       display: flex;
       gap: calc(var(--icon-size) / 1);
 
@@ -67,17 +71,15 @@
 
 
   }
+}
 
 
 
 
 
 
-  @keyframes draw {
-    to {
-      stroke-dashoffset: 0;
-    }
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
   }
-
-
 }

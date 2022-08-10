@@ -29,18 +29,19 @@ p {
   padding: 0;
 }
 
-:where(ul, ol):where([role="list"]) {
+ul,
+ol [role="list"] {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-:where(img, picture, svg) {
+img,
+picture,
+video,
+svg {
   display: block;
   max-width: 100%;
-}
-
-img[width] {
   height: auto !important;
 }
 

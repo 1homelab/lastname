@@ -2,7 +2,7 @@
 
 a {
   text-decoration: none;
-  color: var(--links);
+  color: inherit;
 
   // &:hover {
   // color: var(--color1);
@@ -13,8 +13,8 @@ a {
 h1,
 h2,
 h3 {
-  line-height: 1.1;
-  letter-spacing: .04em;
+  line-height: inherit;
+  font-weight: inherit;
 }
 
 h1 {
