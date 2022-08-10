@@ -1,20 +1,20 @@
 @use '../utils' as *;
 
+.theme-switcher {}
+
 .page-header {
   position: relative;
   overflow: hidden;
 
-
   .page-banner {
-    height: 100%;
-    max-width: 46rem;
+    max-width: var(--container-weight);
     padding-bottom: 2rem;
     padding-top: 2rem;
     position: relative;
-    transition: all 1s linear;
+    //transition: all 1s linear;
 
     .logo {
-      width: clamp(15rem, 5vw, 4rem);
+      width: clamp(10rem, 5vw, 15rem);
     }
 
     .page-text {
@@ -26,8 +26,6 @@
         & spam {
           font-size: .6rem;
         }
-
-
       }
 
 
@@ -65,6 +63,8 @@
           animation: draw 5s linear forwards;
         }
       }
+
+
 
 
     }

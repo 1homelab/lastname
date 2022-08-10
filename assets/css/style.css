@@ -163,6 +163,10 @@ body {
   flex-direction: column;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .grid {
   display: grid;
 }
@@ -192,9 +196,6 @@ body {
   width: 100%;
 }
 
-@max-weight {
-  max-width: 46rem;
-}
 a {
   text-decoration: none;
   color: inherit;
@@ -232,15 +233,13 @@ h1 {
   overflow: hidden;
 }
 .page-header .page-banner {
-  height: 100%;
-  max-width: 46rem;
+  max-width: var(--container-weight);
   padding-bottom: 2rem;
   padding-top: 2rem;
   position: relative;
-  transition: all 1s linear;
 }
 .page-header .page-banner .logo {
-  width: clamp(15rem, 5vw, 4rem);
+  width: clamp(10rem, 5vw, 15rem);
 }
 .page-header .page-banner .page-text h1 {
   position: relative;

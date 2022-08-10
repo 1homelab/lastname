@@ -78,6 +78,10 @@ body {
   flex-direction: column;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 // grid
 .grid {
   display: grid
